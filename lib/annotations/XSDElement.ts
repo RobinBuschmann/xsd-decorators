@@ -1,5 +1,5 @@
 import {IXSDElementOptions} from "../interfaces/IXSDElementOptions";
-import {XSDElement as XSDElementModel} from "../models/wsdl/XSDElement";
+import {XSDElement as XSDElementModel} from "../models/XSDElement";
 
 export function XSDElement(target: any, key: string): any;
 export function XSDElement(options: IXSDElementOptions): any;

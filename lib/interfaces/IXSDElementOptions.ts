@@ -4,7 +4,7 @@ import {IXSDAttributeTypeReqOptions} from "./IXSDAttributeTypeReqOptions";
 
 export interface IXSDElementOptions extends IRestrictionOptions {
 
-  type?: XSDNSType;
+  type?: XSDNSType|any;
   simpleTypeName?: string;
   choiceName?: string;
   arrayType?: any;

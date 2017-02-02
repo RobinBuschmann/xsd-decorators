@@ -1,5 +1,5 @@
 import {IXSDAttributeOptions} from "../interfaces/IXSDAttributeOptions";
-import {XSDAttribute as XSDAttributeModel} from "../models/wsdl/XSDAttribute";
+import {XSDAttribute as XSDAttributeModel} from "../models/XSDAttribute";
 
 export function XSDAttribute(target: any, key: string): any;
 export function XSDAttribute(options: IXSDAttributeOptions): any;

@@ -1,40 +1,13 @@
 import 'es6-shim';
 import 'reflect-metadata';
 
-export const WSDL_URL = 'http://schemas.xmlsoap.org/wsdl/';
-export const WSDL_NS = 'wsdl';
-export const SOAP_URL = 'http://schemas.xmlsoap.org/wsdl/soap/';
-export const SOAP_NS = 'soap';
 export const XSD_URL = 'http://www.w3.org/2001/XMLSchema';
 export const XSD_NS = 'xsd';
 export const TNS_NS = 'tns';
 export const XMLNS_NS = 'xmlns';
-export const HTTP_URL = 'http://schemas.xmlsoap.org/soap/http';
-export const STYLE = 'document';
-
-export const TYPE_SUFFIX = 'Type';
-export const PORT_TYPE_SUFFIX = 'Type';
-export const MESSAGE_SUFFIX = 'Message';
-export const BINDING_SUFFIX = 'Binding';
 
 export type XSDType = 'string'|'decimal'|'integer'|'int'|'boolean'|'date'|'time';
 export type XSDNSType = 'xsd:string'|'xsd:decimal'|'xsd:integer'|'xsd:int'|'xsd:boolean'|'xsd:date'|'xsd:time';
-
-/**
- * Returns stored object via reflect meta data. If type is specified,
- * the requested object will be instantiated and stored via reflec metadata
- */
-// export function getObjectViaReflect(key: string, target: any, type?: any): any {
-//
-//   let complexType = Reflect.getMetadata(key, target);
-//
-//   if (!complexType && type) {
-//     complexType = new type();
-//     Reflect.defineMetadata(key, complexType, target);
-//   }
-//
-//   return complexType;
-// }
 
 /**
  * Returns xsd type of specified value;

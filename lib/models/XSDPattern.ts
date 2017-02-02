@@ -1,4 +1,4 @@
-import {IFullXSDElementOptions} from "../../interfaces/IFullXSDElementOptions";
+import {IFullXSDElementOptions} from "../interfaces/IFullXSDElementOptions";
 import {XMLAttribute} from "xml-decorators";
 
 export class XSDPattern {

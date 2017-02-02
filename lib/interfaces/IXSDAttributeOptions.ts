@@ -3,7 +3,7 @@ import {IRestrictionOptions} from "./IRestrictionOptions";
 
 export interface IXSDAttributeOptions extends IRestrictionOptions {
 
-  type?: XSDNSType;
+  type?: XSDNSType|any;
   simpleTypeName?: string;
   default?: string;
   fixed?: string;

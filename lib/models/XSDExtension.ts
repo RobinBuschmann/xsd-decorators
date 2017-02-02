@@ -1,5 +1,5 @@
 import {XMLAttribute, XMLChild} from "xml-decorators";
-import {XSDNSType} from "../../utils";
+import {XSDNSType} from "../utils";
 import {XSDAttribute} from "./XSDAttribute";
 
 export class XSDExtension {

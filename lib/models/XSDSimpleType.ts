@@ -1,9 +1,9 @@
 import {XSDRestriction} from "./XSDRestriction";
-import {XSD_NS, addCustomNamespace, TYPE_SUFFIX} from "../../utils";
+import {XSD_NS, addCustomNamespace, TYPE_SUFFIX} from "../utils";
 import {XMLAttribute} from "xml-decorators";
 import {XMLChild} from "xml-decorators";
-import {IXSDFullAttributeOptions} from "../../interfaces/IXSDFullAttributeOptions";
-import {IFullXSDElementOptions} from "../../interfaces/IFullXSDElementOptions";
+import {IXSDFullAttributeOptions} from "../interfaces/IXSDFullAttributeOptions";
+import {IFullXSDElementOptions} from "../interfaces/IFullXSDElementOptions";
 
 export class XSDSimpleType {
 

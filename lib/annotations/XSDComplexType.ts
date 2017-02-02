@@ -1,4 +1,4 @@
-import {XSDComplexType as XSDComplexTypeModel} from "../models/wsdl/XSDComplexType";
+import {XSDComplexType as XSDComplexTypeModel} from "../models/XSDComplexType";
 import {IXSDComplexTypeOptions} from "../interfaces/IXSDComplexTypeOptions";
 
 export function XSDComplexType(arg: any|IXSDComplexTypeOptions): any {

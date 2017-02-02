@@ -1,12 +1,12 @@
-import {addCustomNamespace} from "../../utils";
+import {addCustomNamespace} from "../utils";
 import {XSDSimpleType} from "./XSDSimpleType";
 import {XMLAttribute} from "xml-decorators";
-import {IXSDFullAttributeOptions} from "../../interfaces/IXSDFullAttributeOptions";
-import {XSDNSType} from "../../utils";
-import {IXSDAttributeOptions} from "../../interfaces/IXSDAttributeOptions";
+import {IXSDFullAttributeOptions} from "../interfaces/IXSDFullAttributeOptions";
+import {XSDNSType} from "../utils";
+import {IXSDAttributeOptions} from "../interfaces/IXSDAttributeOptions";
 import {XSDComplexType} from "./XSDComplexType";
-import {IXSDAttributeTypeReqOptions} from "../../interfaces/IXSDAttributeTypeReqOptions";
-import {getXSDTypeByDataType} from "../../utils";
+import {IXSDAttributeTypeReqOptions} from "../interfaces/IXSDAttributeTypeReqOptions";
+import {getXSDTypeByDataType} from "../utils";
 
 export class XSDAttribute {
 

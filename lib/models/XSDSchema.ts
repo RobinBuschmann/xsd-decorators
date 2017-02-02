@@ -1,9 +1,9 @@
 import {XSDElement} from "./XSDElement";
 import {XSDComplexType} from "./XSDComplexType";
-import {WSDL_URL, XSD_URL, XMLNS_NS, XSD_NS} from "../../utils";
+import {XSD_URL, XMLNS_NS, XSD_NS} from "../utils";
 import {XSDSimpleType} from "./XSDSimpleType";
-import {XMLAttribute} from "xml-decorators";
-import {XMLChild} from "xml-decorators";
+import {XMLAttribute, XMLChild, xml, xmlAttribute} from "xml-decorators";
+import {IXSDSchemaOptions} from "../interfaces/IXSDSchemaOptions";
 
 export class XSDSchema {
 
@@ -11,13 +11,13 @@ export class XSDSchema {
   readonly attributeFormDefault = 'unqualified';
 
   @XMLAttribute
-
-  @XMLAttribute({namespace: XMLNS_NS})
-  readonly wsdl: string = WSDL_URL;
+  readonly elementFormDefault = 'unqualified';
 
   @XMLAttribute({namespace: XMLNS_NS})
   readonly xsd: string = XSD_URL;
-  readonly elementFormDefault = 'unqualified';
+
+  @XMLAttribute({namespace: XMLNS_NS})
+  private tns: string;
 
   @XMLAttribute
   private targetNamespace: string;
@@ -43,9 +43,41 @@ export class XSDSchema {
   private simpleTypes: XSDSimpleType[];
   private hasSimpleType: {[simpleTypeName: string]: boolean} = {};
 
-  setTargetNamespace(targetNamespace: string): void {
+  static createElement(options: IXSDSchemaOptions): XSDSchema {
+    const schema = new XSDSchema();
+    const complexType = XSDComplexType.getXSDComplexType(options.target.prototype);
+    const element = XSDElement.createElement({name: options.elementName}, complexType);
+
+    schema.setTargetNamespace(options.targetNamespace);
+    schema.addElement(element);
+
+    if (options.namespaces) {
+
+      const xmlElement = xml.getXMLElement(schema);
+      if (xmlElement) {
+        Object
+          .keys(options.namespaces)
+          .forEach(ns => {
+            const hasDynElKey = '__hasDynEl';
+            xmlElement[hasDynElKey] = xmlElement[hasDynElKey] || {};
+            if (xmlElement[hasDynElKey][ns]) return;
+            xmlElement[hasDynElKey][ns] = true;
+            xmlElement.addAttribute(xmlAttribute.createAttribute({
+              name: ns,
+              namespace: XMLNS_NS,
+              value: options.namespaces && options.namespaces[ns],
+            }));
+          });
+      }
+    }
+
+    return schema;
+  }
+
+  setTargetNamespace(targetNamespace: string, fillNs: boolean = false): void {
 
     this.targetNamespace = targetNamespace;
+    if (fillNs) this.tns = targetNamespace;
   }
 
   addElement(element: XSDElement): void {

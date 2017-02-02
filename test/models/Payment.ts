@@ -2,9 +2,10 @@ import {XSDComplexType} from "../../lib/annotations/XSDComplexType";
 import {XSDElement} from "../../lib/annotations/XSDElement";
 
 @XSDComplexType
-export class ExampleResponseData {
+export class Payment {
 
-  @XSDElement
-  result: string;
-
+  @XSDElement({
+    enumeration: ['credit card', 'paypal']
+  })
+  payWith: string;
 }

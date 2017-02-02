@@ -1,10 +1,10 @@
-import {addCustomNamespace, getXSDTypeByDataType} from "../../utils";
+import {addCustomNamespace, getXSDTypeByDataType} from "../utils";
 import * as _ from "lodash";
 import {XSDComplexType} from "./XSDComplexType";
-import {IXSDElementOptions} from "../../interfaces/IXSDElementOptions";
+import {IXSDElementOptions} from "../interfaces/IXSDElementOptions";
 import {XSDSimpleType} from "./XSDSimpleType";
 import {XMLAttribute} from "xml-decorators";
-import {IFullXSDElementOptions} from "../../interfaces/IFullXSDElementOptions";
+import {IFullXSDElementOptions} from "../interfaces/IFullXSDElementOptions";
 import {XSDExtension} from "./XSDExtension";
 import {XSDAttribute} from "./XSDAttribute";
 

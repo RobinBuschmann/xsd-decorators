@@ -1,9 +1,9 @@
-import {addCustomNamespace} from "../../utils";
+import {addCustomNamespace} from "../utils";
 import {XSDElement} from "./XSDElement";
 import {XSDChoice} from "./XSDChoice";
 import {XMLAttribute} from "xml-decorators";
 import {XMLChild} from "xml-decorators";
-import {IXSDComplexTypeOptions} from "../../interfaces/IXSDComplexTypeOptions";
+import {IXSDComplexTypeOptions} from "../interfaces/IXSDComplexTypeOptions";
 import {XSDAttribute} from "./XSDAttribute";
 import {XSDExtension} from "./XSDExtension";
 

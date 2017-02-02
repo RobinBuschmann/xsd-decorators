@@ -1,6 +1,6 @@
 import {XSDEnumeration} from "./XSDEnumeration";
 import {XSDPattern} from "./XSDPattern";
-import {IFullXSDElementOptions} from "../../interfaces/IFullXSDElementOptions";
+import {IFullXSDElementOptions} from "../interfaces/IFullXSDElementOptions";
 import {XMLAttribute} from "xml-decorators";
 import {XMLChild} from "xml-decorators";
 
