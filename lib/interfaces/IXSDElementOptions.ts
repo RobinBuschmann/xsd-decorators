@@ -7,7 +7,6 @@ export interface IXSDElementOptions extends IRestrictionOptions {
   type?: XSDNSType|any;
   simpleTypeName?: string;
   choiceName?: string;
-  arrayType?: any;
   minOccurs?: number;
   maxOccurs?: number|'unbounded';
   attributes?: {[name: string]: IXSDAttributeTypeReqOptions};

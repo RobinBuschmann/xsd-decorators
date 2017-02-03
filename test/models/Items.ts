@@ -6,7 +6,14 @@ import {Item} from "./Item";
 export class Items {
 
   @XSDElement({
-    arrayType: Item
+    type: Item
   })
   item: Item[];
+
+  @XSDElement({
+    attributes: {
+      unit: {type: 'xsd:string'}
+    }
+  })
+  totalWeight: number;
 }

@@ -33,11 +33,17 @@ export class XSDElement {
 
     (options as IFullXSDElementOptions).name = key;
 
+    if (options.maxOccurs > 1 && propertyType !== Array) {
+
+      console.warn(`Warning: ${target.constructor.name}.${key} <-- When option "maxOccurs" is greater than 1, ` +
+        `the target type annotation should be type of an array.`);
+    }
+
     if (propertyType === Array) {
 
-      if (!options.arrayType) {
+      if (!options.type) {
 
-        throw new Error(`In case of arrays you have to define the type of this array in the (options.arrayType).`);
+        throw new Error(`In case of arrays you have to define the type of this array in options.type`);
       }
 
       if (options.maxOccurs === void 0) {
@@ -47,7 +53,11 @@ export class XSDElement {
         options.maxOccurs = 'unbounded';
       }
 
-      propertyType = options.arrayType;
+      if (typeof options.type === 'function') {
+
+        propertyType = options.type;
+        options.type = void 0;
+      }
     }
 
     const complexType = XSDComplexType.getXSDComplexType(propertyType.prototype);

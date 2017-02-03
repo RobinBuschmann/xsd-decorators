@@ -30,7 +30,7 @@ export class XSDRestriction {
       return options.type;
     }
 
-    throw new Error(`Either base option is not set for XSD restriction or the corresponding type could not been calculated`);
+    throw new Error(`Type could not have been resolved`);
   }
 
   private validateOptions(options: IFullXSDElementOptions): void {

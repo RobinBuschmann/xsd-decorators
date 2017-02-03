@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/RobinBuschmann/xsd-decorators.png?branch=master)](https://travis-ci.org/RobinBuschmann/xsd-decorators)
 
 # xsd-decorators
-XSD decorators for creating xsd schemas by annotating classes.
+Decorators for creating [xsd schemas](https://www.w3.org/TR/xmlschema11-1/).
 
 ## Usage
 ### 1. Annotate class
@@ -62,7 +62,7 @@ export class PurchaseOrder {
 
 }
 ```
-(Visit [github](https://github.com/RobinBuschmann/xsd-decorators/tree/master/test/models) for full example )
+(Click [here](https://github.com/RobinBuschmann/xsd-decorators/tree/master/test/models) for full example )
 
 ### 2. Create schema
 ```typescript

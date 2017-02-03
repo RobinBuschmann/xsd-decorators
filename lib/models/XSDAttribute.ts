@@ -38,6 +38,7 @@ export class XSDAttribute {
 
   static annotate(target: any, key: string, options: IXSDAttributeOptions = {}): void {
 
+    options = Object.assign({}, options);
     const complexType = XSDComplexType.getOrCreateIfNotExist(target);
 
     if (!options.type) {

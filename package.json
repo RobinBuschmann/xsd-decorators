@@ -1,7 +1,7 @@
 {
-  "name": "soap-decorators",
+  "name": "xsd-decorators",
   "version": "1.0.0",
-  "description": "SOAP decorators for creating wsdl's and annotating services to provide metadata for node-soap",
+  "description": "Decorators for generating xsd schemas",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
@@ -19,12 +19,10 @@
   },
   "homepage": "https://github.com/RobinBuschmann/soap-typescript#readme",
   "peerDependencies": {
-    "soap": "^0.17.0",
     "reflect-metadata": "^0.1.8"
   },
   "dependencies": {
     "@types/reflect-metadata": "0.0.5",
-    "@types/soap": "0.0.30",
     "es6-shim": "0.35.2",
     "xml-decorators": "1.0.4"
   },
