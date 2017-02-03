@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/RobinBuschmann/soap-typescript.git"
   },
-  "author": "",
+  "author": "Robin Buschmann <robinbuschmann@hotmail.de>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/RobinBuschmann/soap-typescript/issues"
