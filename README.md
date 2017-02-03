@@ -3,6 +3,11 @@
 # xsd-decorators
 Decorators for creating [xsd schemas](https://www.w3.org/TR/xmlschema11-1/).
 
+## Installation
+```
+npm install xsd-decorators --save
+```
+
 ## Usage
 ### 1. Annotate class
 
