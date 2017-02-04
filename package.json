@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RobinBuschmann/soap-typescript.git"
+    "url": "git+https://github.com/RobinBuschmann/xsd-decorators.git"
   },
   "author": "Robin Buschmann <robinbuschmann@hotmail.de>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RobinBuschmann/soap-typescript/issues"
+    "url": "https://github.com/RobinBuschmann/xsd-decorators/issues"
   },
-  "homepage": "https://github.com/RobinBuschmann/soap-typescript#readme",
+  "homepage": "https://github.com/RobinBuschmann/xsd-decorators#readme",
   "peerDependencies": {
     "reflect-metadata": "^0.1.8"
   },
