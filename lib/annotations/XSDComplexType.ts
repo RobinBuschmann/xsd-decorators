@@ -1,7 +1,7 @@
 import {XSDComplexType as XSDComplexTypeModel} from "../models/XSDComplexType";
 import {IXSDComplexTypeOptions} from "../interfaces/IXSDComplexTypeOptions";
 
-export function XSDComplexType(arg: any|IXSDComplexTypeOptions): any {
+export function XSDComplexType(arg: IXSDComplexTypeOptions|any): any {
 
   if (typeof arg === 'function') {
 
